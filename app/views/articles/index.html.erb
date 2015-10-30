@@ -1,7 +1,9 @@
-<h1 class="col-xs-10 col-offset-1">
-	Welcome to my Awesome Soccer Website!
-</h1>
+<% @articles.each do |article| %>
+	<div>
+		<h1><%= article.title %></h1><br />
+		<i><%= article.league %></i><br />
+		<p><%= article.body %></p><br />
+	</div>
 
-<p class="col-xs-10 col-offset-1">
-	We're currently working on some fantastic content. Please check back soon!
-</p>
+	<br />
+<%end%>
