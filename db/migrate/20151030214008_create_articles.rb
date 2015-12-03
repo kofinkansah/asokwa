@@ -6,7 +6,7 @@ class CreateArticles < ActiveRecord::Migration
     	t.string :league
     	t.text :body
 
-      t.timestamps
+      	t.timestamps
     end
   end
 end
