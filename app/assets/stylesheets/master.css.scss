@@ -2,30 +2,30 @@
 	clear:both;
 }
 
-.slogan {
-  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
-  font-style: italic;
-  padding-top:26px;
+.main-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top:10px;
+  margin-bottom:15px;
+  padding:20px;
 }
-
-
 
 h1 {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 300;
   letter-spacing: -1.5px;
-  color: #5692A6;
+  color: #3C6125;
 }
 
 h2 {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 200;
   letter-spacing: -1.5px;
-  color: #21BF33;
-}
-
-.logo {
-  padding-top:26px;
+  color: #381616;
 }
 
 .navbar {
@@ -33,4 +33,17 @@ h2 {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
 }

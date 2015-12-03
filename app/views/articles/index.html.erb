@@ -1,18 +1,15 @@
-<div class="text-center jumbotron">
-<h1>Welcome to the Asokwa Soccer!</h1>
+<div class="center jumbotron">
+<h1>Welcome to Asokwa Soccer!</h1>
 
-<h2>This is the home of exciting soccer news and brilliant analysis on the latest in World soccer.</h2>
+<h2>Home of exciting soccer news and brilliant analysis on the latest in World soccer.</h2>
 </div>
 
-<div class="main-box col-xs-10 col-xs-offset-1">
-	<% @articles.each do |article| %>
-		<div>
-			<h1><%= article.title %></h1><br />
-			<i><%= article.league %></i><br />
-			<p><%= article.body %></p><br />
-		</div>
-	
-		<br />
-	<%end%>
-</div>
+<% @articles.each do |article| %>
+  <div class="main-box col-xs-10 col-xs-offset-1">
+		<h1><%= article.title %></h1><br />
+		<i><%= article.league %></i><br />
+		<p><%= article.body %></p><br />
+  </div>
+<%end%>
+
 
