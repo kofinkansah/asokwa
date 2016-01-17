@@ -1,4 +1,5 @@
 Asokwa::Application.routes.draw do
+  get "users/new"
   root 'articles#index'
 
   resources :articles

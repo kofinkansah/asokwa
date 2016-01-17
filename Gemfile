@@ -38,6 +38,11 @@ gem 'bootstrap-sass', '~> 3.3.4'
 # Use SimpleForm for forms
 gem 'simple_form'
 
+# Use rspec for testing
+group :development, :test do
+	gem 'rspec-rails', '~> 3.0'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
