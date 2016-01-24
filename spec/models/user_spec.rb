@@ -31,10 +31,37 @@ RSpec.describe User, type: :model do
   		expect(user).not_to be_valid
   	end
 
+  	it "should accept valid email addresses" do #test6
+  		valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
+  													first.last@foo.jp alice+bob@baz.cn]
+  		valid_addresses.each do |valid_address|
+  		user = User.new(name: "Zayka", email: valid_address)
+  		expect(user).to be_valid, "#{valid_address.inspect} should be valid"
+  		end #for valid addresses block
+  	end
+
+  	it "should reject invalid email address" do #test7
+  		invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
+  													foo@bar_baz.com foo@bar+baz.com]
+  		invalid_addresses.each do |invalid_address|
+  		user = User.new(name: "Xuru", email: invalid_address)
+  		expect(user).not_to be_valid, "#{invalid_address.inspect} should be invalid"
+  		end #for invalid addresses block											
+  	end #for test7
+	 
+    it "should only accept  unique emails" do #test8
+      user = User.new(name: "Johnson", email: 'tester@example.com')
+      duplicate_user = user.dup
+      duplicate_user.email = user.email.upcase
+      user.save
+      expect(duplicate_user).not_to be_valid
+
+    end
+
+
+
 
 	end #for describe "User Entry" line
-
-
 
 
 end
