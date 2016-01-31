@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe "User Entry" do	
   	it "should be valid" do #test1
-  		user = User.new(name: "Johnson", email: 'tester@example.com')
+  		user = User.new(name: "Johnson", email: 'user@example.com', 
+                      password: "foobar", password_confirmation: "foobar")
   		expect(user).to be_valid
   	end
 
@@ -49,17 +50,25 @@ RSpec.describe User, type: :model do
   		end #for invalid addresses block											
   	end #for test7
 	 
-    it "should only accept  unique emails" do #test8
+    it "should only accept unique emails" do #test8
       user = User.new(name: "Johnson", email: 'tester@example.com')
       duplicate_user = user.dup
       duplicate_user.email = user.email.upcase
       user.save
       expect(duplicate_user).not_to be_valid
-
     end
 
+    it "should have a present password" do #test 9
+      user = User.new(password: "foobar", password_confirmation: "foobar")
+      user.password = user.password_confirmation = " " * 6
+      expect(user).not_to be_valid
+    end
 
-
+    it "should have a password of a minimum 6 characters" do #test 10
+      user = User.new(password: "foobar", password_confirmation: "foobar")
+      user.password = user.password_confirmation = "a" * 5
+      expect(user).not_to be_valid
+    end
 
 	end #for describe "User Entry" line
 
