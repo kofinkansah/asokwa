@@ -43,6 +43,9 @@ group :development, :test do
 	gem 'rspec-rails', '~> 3.0'
 end
 
+# Use bcrypt for hashed passwords
+gem 'bcrypt-ruby', '~>3.1.2'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
