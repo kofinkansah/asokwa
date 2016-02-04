@@ -36,7 +36,8 @@ RSpec.describe User, type: :model do
   		valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
   													first.last@foo.jp alice+bob@baz.cn]
   		valid_addresses.each do |valid_address|
-  		user = User.new(name: "Zayka", email: valid_address)
+  		user = User.new(name: "Zayka", email: valid_address, password: "foobar",
+                      password_confirmation: "foobar" )
   		expect(user).to be_valid, "#{valid_address.inspect} should be valid"
   		end #for valid addresses block
   	end
@@ -56,6 +57,14 @@ RSpec.describe User, type: :model do
       duplicate_user.email = user.email.upcase
       user.save
       expect(duplicate_user).not_to be_valid
+    end
+
+    it "should save email as lowercase" do
+      user = User.new(name: "Jeremiah", email: 'TeSTer@EXample.COM',
+                      password: "foobar", password_confirmation: "foobar")
+      mixed_case_email = user.email
+      user.save
+      expect(user.reload.email).to eq(mixed_case_email.downcase)
     end
 
     it "should have a present password" do #test 9
