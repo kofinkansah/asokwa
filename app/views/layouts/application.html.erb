@@ -62,9 +62,43 @@
   	</div><!--/.wrap -->
   	<div id="footer">
   	  <div class="container">
-  	    <b>Footer Here</b>
-  	    <br />
-  	    <%= link_to 'About Us', '#' %>
+				<div class="col-xs-12 col-sm-3">
+        	<b>Asokwa Soccer</b>
+        	<br />
+        	<%= link_to 'News Stories', articles_path %>
+        	<br />
+        	<%= link_to 'Scores & Fixtures', '#' %>
+        	<br />
+        	<%= link_to 'Quizzes', '#' %>
+      	</div>
+				<div class="col-xs-12 col-sm-3">
+        	<b>About</b>
+        	<br />
+        	<%= link_to 'Team', '#' %>
+        	<br />
+        	<%= link_to 'Careers', '#' %>
+        	<br />
+        	<%= link_to 'Privacy Policy', '#' %>
+      	</div>
+      	<div class="col-xs-12 col-sm-3">
+        	<b>Contact</b>
+        	<br />
+        	<i>Site developed by</i>
+        	<br />
+        	<%= link_to 'Kofi Appiah-Nkansah', 'https://kofinkansah.github.io' %>
+        	<br />
+        	Raleigh, NC
+      	</div>
+      	<div class="col-xs-12 col-sm-3 social">
+        	<b>Social</b>
+        	<br />
+        	<%= link_to 'https://github.com/kofinkansah' do %>
+          	<%= image_tag 'github.png', :class => 'social-button' %>
+        	<% end %>
+        	<%= link_to 'https://www.linkedin.com/in/kofi-appiah-nkansah-4125591a' do %>
+          	<%= image_tag 'linkedin.png', :class => 'social-button' %>
+        	<% end %>
+      	</div>
   	  </div>
   	  <%= debug(params) if Rails.env.development? %>
   	</div>
