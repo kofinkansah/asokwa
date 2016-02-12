@@ -1,22 +1,23 @@
 <div class="center jumbotron">
-  <h1>Asokwa Soccer</h1>
-  
-  <h2><i>Exciting soccer news and brilliant analysis</i></h2>
-  <br />
-  <h3>Countdown to the start of UEFA Euro 2016!</h3>
-  <div class="banner-date">10Jun2016 to 10Jul2016</div>
-  <div id="getting-started"></div>
-  <script type="text/javascript">
-    $("#getting-started")
-    .countdown("2016/06/10", function(event) {
-      $(this).text(
-        event.strftime('%D days %H:%M:%S')
-      );
-    });
-  </script>
-  <br />
-  <%= link_to 'Sign Up!', signup_path, class: "btn btn-lg btn-success" %>
-  <br /><br />
+  <!--<h1>Asokwa Soccer</h1> -->
+  <div class="frosty col-xs-10 col-xs-offset-1 text-center">
+    <h2>Soccer news and features</h2>
+    <br />
+    <h3>Countdown to the start of UEFA Euro 2016!</h3>
+    <div class="banner-date">10Jun2016 to 10Jul2016</div>
+    <div id="getting-started"></div>
+    <script type="text/javascript">
+      $("#getting-started")
+      .countdown("2016/06/10", function(event) {
+        $(this).text(
+          event.strftime('%D days %H:%M:%S')
+        );
+      });
+    </script>
+    <br />
+    <%= link_to 'Sign Up!', signup_path, class: "btn btn-lg btn-success" %>
+    <br /><br />
+  </div>
 </div>
 
 <% @articles.each do |article| %>
