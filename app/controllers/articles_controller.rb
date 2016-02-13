@@ -7,6 +7,9 @@ class ArticlesController < ApplicationController
 		@article = Article.new
 	end
 
+	def show
+	end
+	
 	def create
 		Article.create(article_params)
 		redirect_to root_path
