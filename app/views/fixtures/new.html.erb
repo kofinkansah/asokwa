@@ -1,0 +1,14 @@
+<div class="main-box col-xs-10 col-xs-offset-1">
+
+<h1>Add a Fixture or Match Result</h1>
+<%= simple_form_for @fixture do |f| %>
+	<%= f.input :league %>
+	<%= f.input :home_team %>
+	<%= f.input :away_team %>
+	<%= f.input :home_score %>
+	<%= f.input :away_score %>
+	<%= f.input :match_time %>
+	<br />
+	<%= f.submit 'Create', :class => 'btn btn-primary' %>
+	<% end %>
+</div>

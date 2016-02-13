@@ -3,7 +3,7 @@ Asokwa::Application.routes.draw do
   root 'articles#index'
   resources :articles
   resources :users
-  resources :fixtures, only: [:index, :show, :new]
+  resources :fixtures
 
 
 
