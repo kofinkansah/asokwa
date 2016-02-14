@@ -1,13 +1,13 @@
-<div class="main-box col-xs-10 col-xs-offset-1">
-<% @fixtures.each do |fixture| %>
-<h3><%= fixture.league %></h3>
-<td>
-<tr><%= fixture.home_team %></tr>
-<tr><%= fixture.home_score %></tr>
-<tr><%= fixture.away_team %></tr>
-<tr><%= fixture.away_score %></tr>
-</td>
-<hr />
-<% end %>
-
+<div class="main-box col-xs-10 col-xs-offset-1 fixt">
+	<% @fixtures.each do |fixture| %>
+		<h3><%= fixture.league %></h3>
+		<td>
+		<tr><%= fixture.home_team %></tr>
+		<tr><%= fixture.home_score %></tr>
+		<tr><%= fixture.away_team %></tr>
+		<tr><%= fixture.away_score %></tr>
+		</td>
+		<hr />
+	<% end %>
+	
 </div>

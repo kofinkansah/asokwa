@@ -27,10 +27,10 @@
 	  	  <!-- Collect the nav links, forms and other content for toggling -->
 	  	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	  	  	<ul class="nav navbar-nav">
-	  	  	  <li><%= link_to 'See all stories', root_path %></li>
+	  	  	  <li><%= link_to 'See All Stories', root_path %></li>
+            <li><%= link_to 'View Fixtures and Results', fixtures_path %></li>
 	  	  	</ul>
 	  	  	<ul class="nav navbar-nav navbar-right">
-	  	  	  <li><a href='#'>Link</a></li>
 	  	  	  <%# if user_signed? %>
 	  	  	  <li><%#= link_to 'My Profile', user_path(current_user) %></li>
 	  	  	  <li><%#= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
@@ -39,6 +39,7 @@
 	  	  	  <li><%= link_to 'Sign up', signup_path %></li>
 	  	  	  <%# end%>
 	  	  	  <li><%= link_to 'Add News Story', new_article_path %></li>
+            <li><%= link_to 'Add Fixture or Result', new_fixture_path %></li>
 	  	  	  <li><%= link_to 'About', '#' %></li>
 
 	  	  	</ul>

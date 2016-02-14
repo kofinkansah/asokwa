@@ -8,8 +8,12 @@ class FixturesController < ApplicationController
 	end
 
 	def create
-		Fixture.create(fixture_params)
-		redirect_to fixtures_path
+		@fixture = Fixture.create(fixture_params)
+			if @fixture.valid?
+				redirect_to fixtures_path
+			else
+				render :new, status: :unprocessable_entity
+			end
 	end
 
 	private
