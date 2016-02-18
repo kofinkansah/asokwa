@@ -1,13 +1,31 @@
-<div class="main-box col-xs-10 col-xs-offset-1 fixt">
-	<% @fixtures.each do |fixture| %>
-		<h3><%= fixture.league %></h3>
-		<td>
-		<tr><%= fixture.home_team %></tr>
-		<tr><%= fixture.home_score %></tr>
-		<tr><%= fixture.away_team %></tr>
-		<tr><%= fixture.away_score %></tr>
-		</td>
-		<hr />
-	<% end %>
+<script>
+$(document).ready(function() {
+	$("span").hide();
+
+	/*$("p").append("<button>Reveal Score!</button>");*/
 	
+	$("button").click(function(){
+		/*$(this).prev().show();*/
+		$("span").toggle();	
+		/*$(this).remove();*/
+	});
+});
+</script>
+
+<div class="col-xs-10 col-xs-offset-1">
+<button type="button" class="btn btn-primary btn-lg">Toggle Scores!</button>
 </div>
+<br />
+	<% @fixtures.each do |fixture| %>
+		<div class="fixtures-box col-xs-10 col-xs-offset-1">
+			<h3><%= fixture.league %></h3>
+			<p><%#= fixture.match_time %></p>
+			<tr>
+			<td><%= fixture.home_team %></td>
+			<span id="score">
+			<td><b><%= fixture.home_score %> - </b></td><td><b><%= fixture.away_score %></b></td>
+			</span>
+			<td><%= fixture.away_team %></td>
+			</tr>
+		</div>
+	<% end %>
