@@ -161,8 +161,6 @@ aside {
 */
 
 /* for fixtures jquery */
-
-
 .fixtures-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -188,13 +186,21 @@ button {
   cursor: pointer;
 }
 
-
-
 #id td {
   width: 20px;
 }
 
+/* forms */
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
 
+input {
+  height: auto !important;
+}
 
 
 
