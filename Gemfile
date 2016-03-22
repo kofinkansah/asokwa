@@ -49,6 +49,12 @@ end
 # Use bcrypt for hashed passwords
 gem 'bcrypt-ruby', '~>3.1.2'
 
+# Use Puma 
+group :production do
+	gem 'rails_12factor', '0.0.2'
+  gem 'puma',           '2.11.1'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
