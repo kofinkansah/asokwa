@@ -35,7 +35,7 @@
 	  	  	  <li><%#= link_to 'My Profile', user_path(current_user) %></li>
 	  	  	  <li><%#= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
 	  	  	  <%# else %>
-	  	  	  <li><%= link_to 'Sign in', '#' %></li>
+	  	  	  <li><%= link_to 'Log in', login_path %></li>
 	  	  	  <li><%= link_to 'Sign up', signup_path %></li>
 	  	  	  <%# end%>
 	  	  	  <li><%= link_to 'Add News Story', new_article_path %></li>
