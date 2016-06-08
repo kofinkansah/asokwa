@@ -49,11 +49,17 @@ end
 # Use bcrypt for hashed passwords
 gem 'bcrypt-ruby', '~>3.1.2'
 
-# Use Puma 
+# Use Puma and rails_12factor
 group :production do
 	gem 'rails_12factor', '0.0.2'
   gem 'puma',           '2.11.1'
 end
+
+# Use Pry
+gem 'pry-rails', :group => :development
+
+# Use jquery Turbolinks 
+gem 'jquery-turbolinks'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
